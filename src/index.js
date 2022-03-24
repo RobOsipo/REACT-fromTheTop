@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import faker from '@faker-js/faker';
+import CommentDetail from './CommentDetail.js'
 
 
 
@@ -11,22 +12,11 @@ const App = () => {
 
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={faker.image.avatar()} />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Robert O
-                    </a>
-                    <div className="metadata">
-                        <span className="date">
-                            Today at 6pm
-                        </span>
-                    </div>
-                    <div className="text">Nice blog post brahhhh</div>
-                </div>
-            </div>
+            <CommentDetail name="Robert O" date="jan 10" text="Im some text" />
+            <CommentDetail name="Dis odda Guy" date="march 4" text="me too!" />
+            <CommentDetail name="one more dude" date="feb 2" text="Dont forget about me!" />
+            
+            
         </div>
     )
 }
